@@ -1,0 +1,478 @@
+@import url(https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap);
+
+body{
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.site-logo{
+    height: 37px;
+    width: 70px;
+}
+
+header{
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color:black
+}
+
+nav ul{
+    list-style: none;
+    height: 20%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+nav ul li{
+    padding: 5px;
+    margin-left: 10px;
+    display: block; 
+}
+
+.well-spaced{
+    padding: 0 60px;
+}
+
+.second-image{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.page-name{
+    margin-top: -40px;
+    text-align: center;
+    font-family: 'Twinkle Star', cursive;
+    color:hotpink;
+    font-size:x-large
+}
+
+.first-text{
+    text-align: center;
+}
+
+ 
+
+.item1{
+    grid-area: first;
+   
+}
+.item2{
+    grid-area: second;
+    
+}
+.item3{
+    grid-area: third;
+    
+}
+.item4{
+    grid-area: fourth;
+}
+.item5{
+    grid-area: fifth;
+}
+.item6{
+    grid-area: sixth;
+}
+
+.grid-container2{
+    display: none !important;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.grid-container3{
+    display: none !important;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 'first third third fourth fourth'
+                         'second third third fifth sixth';
+
+    
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 45px;
+    gap: 3px;                  
+    
+}
+
+@media screen and (min-width: 865px){
+
+    .item1{
+        grid-area: first;
+       
+    }
+    .item2{
+        grid-area: second;
+        
+    }
+    .item3{
+        grid-area: third;
+        
+    }
+    .item4{
+        grid-area: fourth;
+    }
+    .item5{
+        grid-area: fifth;
+    }
+    .item6{
+        grid-area: sixth;
+    }
+
+    .grid-container2{
+        display: none !important;
+    }
+
+    .grid-container3{
+        display: none !important;
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-template-areas: 'first third third fourth fourth'
+                             'second third third fifth sixth';
+    
+        
+        justify-content: center; 
+        align-items: center; 
+        padding-top: 45px;
+        gap: 3px;                  
+        
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 864px){
+
+    .item1{
+        grid-area: first;
+       
+    }
+    .item2{
+        grid-area: second;
+        
+    }
+    .item3{
+        grid-area: third;
+        
+    }
+    .item4{
+        grid-area: fourth;
+        width: 100%;
+    }
+
+    .item-4a{
+        grid-area: fourth;
+        width: 100%;
+        
+    }
+
+    .item5{
+        grid-area: fifth;
+        
+      
+    }
+
+    .item-5a{
+        grid-area: fifth;
+        width: 150%;
+       
+        
+    }
+
+    .item6{
+       grid-area: sixth; 
+
+      
+        
+    }
+
+    .item-6a{
+        grid-area: sixth;
+        padding-left: 86px;
+        width: 73%;
+        
+        
+    }
+
+    .grid-container2{
+        display: none !important;
+    }
+
+    .grid-container3{
+        display: none !important;
+    }
+
+    
+    .grid-container{
+        display: grid;
+        grid-template-areas: 'first third'
+                             'second third'
+                             'fourth fourth'
+                             'fifth sixth';
+                             
+                            
+        justify-content: center; 
+        align-items: center;  
+        /* padding-top: 45px;
+        gap: 3px;                   */
+        
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width:767px){
+    .grid-container{
+        display: none !important;
+    }
+
+    #hamburger-icon{
+        display: block;
+        color: black;
+        margin: auto 0;
+    }
+
+    #hamburger-icon ul a{
+        color: black;
+    }
+
+    #hamburger-icon div {
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        transition: 0.4s;
+        background-color: hotpink;
+    }
+
+    .open .bar1{
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .open .bar2{
+        opacity: 0;
+    }
+    
+    .open .bar3{
+        -webkit-transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px -8px);
+    }
+    
+    .open .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .mobile-menu{
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        background-color: hotpink;
+        line-height: 1;
+    }
+
+    .itemA{
+        grid-area: first;
+       
+    }
+
+    .itemB{
+        grid-area: second;
+        
+    }
+    .itemC{
+        grid-area: third;
+        
+    }
+    .itemD{
+        grid-area: fourth;
+    }
+    .itemE{
+        grid-area: fifth;
+    }
+    .itemF{
+        grid-area: sixth;
+    }
+
+    .grid-container3{
+        display: none !important;
+    }
+    
+    
+    .grid-container2{
+        display: block !important;
+        display: grid;
+        grid-template-areas: 'first'
+                             'second'
+                             'third'
+                             'fourth'
+                             'fifth'
+                             'sixth';
+    
+        
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
+        padding-top: 40px;
+                         
+        
+    }
+
+    
+}
+
+@media screen and (max-width:575px) {
+
+    .grid-container{
+        display: none !important;
+    }
+
+    .grid-container2{
+        display: none !important;
+    }
+
+
+
+    #hamburger-icon{
+        display: block;
+        color: black;
+        margin: auto 0;
+    }
+
+    #hamburger-icon ul a{
+        color: black;
+    }
+
+    #hamburger-icon div {
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        transition: 0.4s;
+        background-color: hotpink;
+    }
+
+    .open .bar1{
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .open .bar2{
+        opacity: 0;
+    }
+    
+    .open .bar3{
+        -webkit-transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px -8px);
+    }
+    
+    .open .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .mobile-menu{
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 80px;
+        width: 90%;
+        background-color: hotpink;
+        line-height: 1;
+    }
+
+    .itemAA{
+        grid-area: first;
+       
+    }
+
+    .itemBB{
+        grid-area: second;
+        
+    }
+    .itemCC{
+        grid-area: third;
+        
+    }
+    .itemDD{
+        grid-area: fourth;
+    }
+    .itemEE{
+        grid-area: fifth;
+    }
+    .itemFF{
+        grid-area: sixth;
+    }
+
+    
+    
+    .grid-container3{
+        display: block !important;
+        display: grid;
+        grid-template-areas: 'first'
+                             'second'
+                             'third'
+                             'fourth'
+                             'fifth'
+                             'sixth';
+    
+        
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
+        padding-top: 40px;
+                         
+        
+    } 
+
+}
+
+   
+
+
+
+
+
+/* #imagesxx{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.first-within{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.first-within1{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.second-within{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+} */
